@@ -13,7 +13,9 @@ const routes: Routes = [
 ];
 // принимает объект метаданных, который описывает, как скомпилировать шаблон компонента и как создать инжектор во время выполнения.
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
